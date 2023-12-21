@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Bungee Shade Regular';
+  src: url(https://fonts.google.com/specimen/Bungee+Shade?preview.text=Paper%20or%20plastic%3F&preview.size=51&query=bu);
+}
+html {
+  font-size: 18px;
+}
+body {
+  color:black;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffec63;
+  background-image: linear-gradient(
+      45deg,
+      #ffd966 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffd966 75%,
+      #ffd966
+    ),
+    linear-gradient(
+      -45deg,
+      #ffd966 25%,
+      transparent 25%,
+      transparent 75%,
+      #ffd966 75%,
+      #ffd966
+    );
+  background-size: 60px 60px;
+  background-position: 0 0;
+  animation: slide 4s infinite linear;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -120px 60px;
+  }
+}
+
+#rulesbtn {
+  color:inherit;
+    font-family:inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  border-radius: 1em;
+  transition: all 0.2s;
+}
+
+#rulesbtn:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+#rulesbtn:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.rock,.paper,.scisors {
+  display: flex;
+  flex-direction: column;
+}

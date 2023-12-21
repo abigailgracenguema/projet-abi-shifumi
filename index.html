@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifumi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/script.js"></script>
+  </head>
+  <body>
+  <main>
+    <section class="game">
+      <h1>Shifumi!</h1>
+        <!-- <input type="button" value="Règles" id="rulesbtn"> -->
+        <!-- <section class="rules">
+          <h2> Mettons les choses au clair!</h2>
+          <p> Tu as le choix entre trois options: hamburger, pizza et sushi</p><br>
+          <div class="1stcase"><img src="" alt=""><p>hamburger bat shushi</p></div>
+          <div class="2ndcase"><img src="" alt=""><p>sushi bat pizza</p></div>
+          <div class="3rdcase"><img src="" alt=""><p>pizza bat l'hamburger</p></div>
+          <p>Tu joueras contre l'ordinateur qui lui aussi choisira l'un de ces trois signes.</p>
+          <div class="each_round">
+              <h3>A chaque manche:</h3>
+              <div class="winner_case"><p>Celui qui gagne récolte un point.</p></div>
+              <div class="loser_case"><p>Le perdant n'a pas de points.</p></div>
+              <div class="equal_case"><p>En cas d'égalité, personne n'a de points.</p></div>
+          </div>
+          <input type="button" id="closeRules" value="OK, j'ai compris!">
+        </section> -->
+        <div class="options">
+            <div class="button-container">
+              <div onclick="playerChoice('hamburger')" class="paper"> <img src="assets/img/icons8-hamburger-96.png"></div>
+            </div>
+            <div class="button-container">
+                <div onclick="playerChoice('pizza')" class="paper"> <img src="assets/img/icons8-pizza-96.png" alt=""></div>
+            </div>
+            <div onclick="playerChoice('Sushi')" class="paper"> <img src="assets/img/icons8-sushi-96.png" alt=""></div>
+            </div>
+        </div>    
+        <div id="result">
+            <div class="choices">
+                <p>Choix du joueur : <span id="playerChoice"></span></p>
+                <button id="replay" style="display: none;" onclick="restartGame()">Recommencer</button>
+                <p>Choix de l'ordinateur : <span id="computerChoice"></span></p>
+            </div>
+            <div class="other-info">
+                <p>Résultat : <span id="roundResult"></span></p>
+                <p>Score : <span id="score"></span></p>
+                <p>Manche en cours : <span id="roundsPlayed">0</span></p>
+            </div>
+        </div>
+    </section>    
+  </main>
+</body>
+</html>
